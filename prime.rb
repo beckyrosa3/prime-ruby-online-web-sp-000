@@ -1,10 +1,6 @@
-def prime?(int)
-  int = [].to_a
-  int.each do |prime|
-  if (prime % prime) == 0
-    true
-  else
-    false
+def prime?(number)
+return false if !number.interger?
+return false if number < 2
+return true if number == 2
+(2..number-1). each {|int| return false if number % int == 0}
   end
-end
-end
